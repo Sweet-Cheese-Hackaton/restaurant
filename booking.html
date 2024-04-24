@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>О нас - Терасса</title>
+    
+</head>
+<style>
+.reservation-section {
+    background-image: url('/images/bookBack.jpg'); /* Добавляем задний фон */
+    background-size: cover; /* Растягиваем фон на всю площадь */
+    background-position: center; /* Центрируем фон */
+    padding: 50px 0; /* Добавляем отступы сверху и снизу для красивого размещения формы */
+}   
+/* Стили для контейнера формы */
+.reservation-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(249, 249, 249, 0.7); /* Более прозрачный белый фон */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Стили для заголовка */
+.reservation-heading {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Стили для формы */
+.reservation-form {
+    margin-top: 20px;
+}
+
+/* Стили для меток и полей ввода */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопки */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для футера */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+}
+
+</style>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="/images/logo.svg" alt="Your Logo">
+        </div>
+        <div class="header-overlay"></div>  
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <div class="navigation"></div>
+                    <a href="index.html#menu">Меню</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#appetizers">Закуски</a></li>
+                        <li><a href="#main-courses">Основные блюда</a></li>
+                        <li><a href="#desserts">Десерты</a></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="about.html">О нас</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="/booking.html">Бронирование</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="reservation" class="reservation-section">
+        <div class="container">
+            <div class="reservation-container">
+                <h2 class="reservation-heading">Бронирование столиков</h2>
+                <form class="reservation-form">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="date">Дата:</label>
+                    <input type="date" id="date" name="date" required>
+    
+                    <label for="time">Время:</label>
+                    <input type="time" id="time" name="time" required>
+    
+                    <label for="guests">Количество гостей:</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+    
+                    <button type="submit">Забронировать</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Терасса. Все права защищены.</p>
+    </footer>
+</body>
+</html>
